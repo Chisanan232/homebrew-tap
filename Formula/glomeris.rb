@@ -1,16 +1,17 @@
 class Glomeris < Formula
   desc "Evidence-first, policy-constrained developer storage autopilot for macOS"
   homepage "https://github.com/Chisanan232/glomeris"
-  version "0.2.0"
   license "Apache-2.0"
 
+  # No explicit `version` stanza: `brew audit --strict` rejects it as redundant
+  # with the version Homebrew scans out of the release URL below.
   on_macos do
     on_arm do
-      url "https://github.com/Chisanan232/glomeris/releases/download/v#{version}/glomeris-aarch64-apple-darwin.tar.xz"
+      url "https://github.com/Chisanan232/glomeris/releases/download/v0.2.0/glomeris-aarch64-apple-darwin.tar.xz"
       sha256 "4eb08c3d2d38b2755d57ab40976c2e2983048b77252cbd159c48534c7c9ef375"
     end
     on_intel do
-      url "https://github.com/Chisanan232/glomeris/releases/download/v#{version}/glomeris-x86_64-apple-darwin.tar.xz"
+      url "https://github.com/Chisanan232/glomeris/releases/download/v0.2.0/glomeris-x86_64-apple-darwin.tar.xz"
       sha256 "bbbe87c68545189a200727de9a3da2d1c09db522f36ee89f164ca71b09026417"
     end
   end
